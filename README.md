@@ -63,7 +63,7 @@
 + $\sum_{i=0}^{N}A^i=\frac{A^{N+1}-1}{A-1},若 0 \lt A \lt 1, 则 \sum_{i=0}^{N}A^i \le \frac{1}{1-A}$
 
   证明: 
-  $$S = \sum_{i=1}^{0}A^i, (0\ltA\lt1)$$
+  $$S = \sum_{i=1}^{0}A^i, (0 \lt A \lt 1)$$
   
 + $\sum_{i=1}^{+\infty}i/2^i = 2$
 
