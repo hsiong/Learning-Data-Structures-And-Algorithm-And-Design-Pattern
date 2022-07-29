@@ -65,11 +65,7 @@
   证明: 
   $$
    S = \sum_{i=1}^{+\infty}A^i, (0 \lt A \lt 1) \\
-  S = 1 + A + A^2 + A^3 + ... \\
-  AS = A + A^2 + A^3 + A^4 + ... \\
-  将两式相减, S - AS = 1 + (A^{+\infty} -> 0) \\
-   当S -> +\infty,  S = \frac{1}{1-A}, \\ 
-   因 N \le +\infty,  故\sum_{i=0}^{N}A^i = S_N \le S = \frac{1}{1-A}, \\
+
   $$
   
 + $\sum_{i=1}^{+\infty}i/2^i = 2$
