@@ -43,7 +43,7 @@
   C^x=B, C^y=A, A^z=B\\
   => C^x =B=A^z=(C^y)^z\\
   => C^x=(C^y)^z\\
-  => log_AB = z = x/y = \frac{log_CB}{log_CA}
+  => log_AB = z = x/y = \frac{log_CB}{log_CA} 测试
   $$
   
 - $logAB=logA+logB$
