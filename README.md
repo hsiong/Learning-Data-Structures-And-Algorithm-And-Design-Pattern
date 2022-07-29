@@ -43,7 +43,7 @@
   C^x=B, C^y=A, A^z=B\\
   => C^x =B=A^z=(C^y)^z\\
   => C^x=(C^y)^z\\
-  => log_AB = z = x/y = \frac{log_CB}{log_CA} 测试
+  => log_AB = z = x/y = \frac{log_CB}{log_CA}
   $$
   
 - $logAB=logA+logB$
@@ -60,7 +60,7 @@
 
 + $\sum_{i=0}^{N}2^i=2^{N+1}-1$
 
-+ $\sum_{i=0}^{N}A^i=\frac{A^{N+1}-1}{A-1},若 0<A<1, 则 \sum_{i=0}^{N}A^i =xxx \frac{1}{1-A}$
++ $\sum_{i=0}^{N}A^i=\frac{A^{N+1}-1}{A-1},若 0<A<1, 则 \sum_{i=0}^{N}A^i <= \frac{1}{1-A}$
 
   证明: 
   $$
