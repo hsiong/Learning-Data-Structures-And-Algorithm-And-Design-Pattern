@@ -40,15 +40,12 @@
   证明: 
 
   $$
-  \begin{aligned}
-  &C^x=B, C^y=A, A^z=B\\
-  =>{\,}& C^x =B=A^z=(C^y)^z\\
-  =>{\,}& C^x=(C^y)^z\\
-  =>{\,}& log_AB = z = x/y = \frac{log_CB}{log_CA}
-  
-  \end{aligned}
+  C^x=B, C^y=A, A^z=B\\
+  => C^x =B=A^z=(C^y)^z\\
+  => C^x=(C^y)^z\\
+  => log_AB = z = x/y = \frac{log_CB}{log_CA}
   $$
-
+  
 - $logAB=logA+logB$
 
 - $logA/B=logA-logB$
@@ -67,28 +64,24 @@
 
   证明: 
   $$
-  \begin{aligned}
-   S &= \sum_{i=1}^{+\infty}A^i, (0<A<1)\\
-  S &= 1 + A + A^2 + A^3 + ...\\
-  AS &= A + A^2 + A^3 + A^4 + ...\\
-  将两式相减, S - AS &= 1 + (A^{+\infty} -> 0)\\
-   当S -> +\infty,  S &= \frac{1}{1-A}, \\ 
-   因 N \le +\infty,  故\sum_{i=0}^{N}A^i = S_N &\le S = \frac{1}{1-A}, \\
-  \end{aligned}
+   S = \sum_{i=1}^{+\infty}A^i, (0<A<1)\\
+  S = 1 + A + A^2 + A^3 + ...\\
+  AS = A + A^2 + A^3 + A^4 + ...\\
+  将两式相减, S - AS = 1 + (A^{+\infty} -> 0)\\
+   当S -> +\infty,  S = \frac{1}{1-A}, \\ 
+   因 N \le +\infty,  故\sum_{i=0}^{N}A^i = S_N \le S = \frac{1}{1-A}, \\
   $$
-
+  
 + $\sum_{i=1}^{+\infty}i/2^i$ = 2
 
   证明: 
   $$
-  \begin{aligned}
-  S &= \frac{1}{2} + \frac{2}{2^2} + \frac{3}{2^3} + \frac{4}{2^4} + ... \\
-  2 * S, 得 2S &= 1 + \frac{2}{2^1} + \frac{3}{2^2} + \frac{4}{2^3} + ... \\
-  两式相减, S &= 1 + \frac{1}{2} + \frac{1}{2^2} + \frac{1}{2^3} + \frac{1}{2^4} + ... \\
-  等差数列, S &= 2
-  \end{aligned}
+  S = \frac{1}{2} + \frac{2}{2^2} + \frac{3}{2^3} + \frac{4}{2^4} + ... \\
+  2 * S, 得 2S = 1 + \frac{2}{2^1} + \frac{3}{2^2} + \frac{4}{2^3} + ... \\
+  两式相减, S = 1 + \frac{1}{2} + \frac{1}{2^2} + \frac{1}{2^3} + \frac{1}{2^4} + ... \\
+  等差数列, S = 2
   $$
-
+  
 + 
 
 
