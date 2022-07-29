@@ -20,10 +20,8 @@
 # Before You Start
 
 ## 数学基础
-+ 预览:   
- [Math.pdf](Math.pdf)  
-+ latex源码:  
- [Math.md](Math.md)
+[Math.pdf](Math.pdf)  
+ 
  
 
 
