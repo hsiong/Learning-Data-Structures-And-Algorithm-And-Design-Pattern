@@ -21,7 +21,7 @@
 
 ## 数学基础
 
- [github不支持latex预览, 提供pdf: Math.pdf](Math.pdf) 
+ ![github不支持latex预览, 提供pdf: Math.pdf](Math.pdf) 
 
 
 
