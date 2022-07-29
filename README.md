@@ -64,7 +64,7 @@
 
   证明: 
   $$
-   S = \sum_{i=1}^{+\infty}A^i, (0 \lt A \lt 1) \\
+   S = \sum_{i=1}^{0}A^i, (0 \lt A \lt 1) \\
 
   $$
   
