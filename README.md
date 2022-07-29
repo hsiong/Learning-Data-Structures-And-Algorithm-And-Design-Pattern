@@ -60,7 +60,7 @@
 
 + $\sum_{i=0}^{N}2^i=2^{N+1}-1$
 
-+ $\sum_{i=0}^{N}A^i=\frac{A^{N+1}-1}{A-1},若 0\ltA\lt1, 则 \sum_{i=0}^{N}A^i \le \frac{1}{1-A}$
++ $\sum_{i=0}^{N}A^i=\frac{A^{N+1}-1}{A-1},若 0 \lt A \lt 1, 则 \sum_{i=0}^{N}A^i \le \frac{1}{1-A}$
 
   证明: 
   $$
