@@ -12,10 +12,10 @@
 
 # Table of Contents
 + [Java - ongoing](Java)
-+ [Go - ongoing](Go)
-+ [Rust - ongoing](Rust)
-+ [C - ongoing](C)
 + [React - ongoing](React)
++ Go - ongoing
++ Rust - ongoing
++ C - ongoing
 
 # Before You Start
 
