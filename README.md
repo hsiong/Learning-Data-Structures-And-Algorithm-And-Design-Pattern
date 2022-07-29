@@ -20,8 +20,11 @@
 # Before You Start
 
 ## 数学基础
-
- ![github不支持latex预览, 提供pdf: Math.pdf](Math.pdf) 
++ 预览:   
+ [Math.pdf](Math.pdf)  
++ latex源码:  
+ [Math.md](Math.md)
+ 
 
 
 
