@@ -26,6 +26,10 @@
 
 # Brief
 
+## Design pattern space
+![](file/Screen Shot 2022-10-14 at 10.37.55.png)
+
+
 ## Pattern Relation
 
 ![Screen Shot 2022-10-13 at 17.44.55](file/PatternRelation.png)
@@ -44,8 +48,15 @@ default controller class for a view and Decorator (175) to add scrolling to a vi
 But the main relationships in MVC are given by the Observer, Composite, and
 Strategy design patterns
 
-
 # Cretional Patterns
+
+Creational design patterns abstract the instantiation process. They help make a system independent of how its objects are created, composed, and represented. 
+
+Creational patterns become important as systems evolve to depend more on
+object composition than class inheritance. As that happens, emphasis shifts away
+from hard-coding a fixed set of behaviors toward defining a smaller set of
+fundamental behaviors that can be composed into any number of more complex
+ones. 
 
 ## Abstract Factory
 
