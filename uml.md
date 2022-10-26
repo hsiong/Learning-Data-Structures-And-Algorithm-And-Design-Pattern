@@ -79,7 +79,7 @@ Things are the most important building blocks of UML. Things can be −
 
 ## Structural things & Notation
 
-Structural things define the static part of the model. They represent the physical and conceptual elements. Following are the brief descriptions of the structural things: 
+Structural things define the static part of the model. They represent the physical and conceptual elements. Following are the brief descriptions of the structural things:
 
 ### Class
 
@@ -110,11 +110,12 @@ A class represent a concept which encapsulates state (**attributes**) and behavi
 - Operations are shown in the third partition. They are services the class provides.
 - The return type of a method is shown after the colon at the end of the method signature.
 - The return type of method parameters are shown after the colon following the parameter name. Operations map onto class methods in code.
-![image](https://user-images.githubusercontent.com/37357447/189064978-1849db8f-b407-4f78-8f7f-59d23ac57997.png)
+  ![image](https://user-images.githubusercontent.com/37357447/189064978-1849db8f-b407-4f78-8f7f-59d23ac57997.png)
 
-- Parameter Directionality: Each parameter in an operation (method) may be denoted as **in**, **out** or **inout** which specifies its direction with respect to the caller. This directionality is shown before the parameter name. 
-> but generally, you don't need to write so.
-![image](https://user-images.githubusercontent.com/37357447/189064812-27ca42ba-1eaf-4b14-995a-f88f39ee5a30.png)
+> Parameter Directionality: Each parameter in an operation (method) may be denoted as **in**, **out** or **inout** which specifies its direction with respect to the caller. This directionality is shown before the parameter name.
+>
+> *<u>But generally, you don't need to write In or Out</u>*
+> ![image](https://user-images.githubusercontent.com/37357447/189064812-27ca42ba-1eaf-4b14-995a-f88f39ee5a30.png)
 
 
 
@@ -199,7 +200,7 @@ A component in UML is shown in the following figure with a name inside. Addition
 
 Component is used to represent any part of a system for which UML diagrams are made.
 
-### Node 
+### Node
 
 A node in UML is represented by a square box as shown in the following figure with a name. A node represents the physical component of the system.
 
@@ -209,21 +210,21 @@ Node is used to represent the physical part of a system such as the server, netw
 
 ## Behavioral Things
 
-A behavioral thing consists of the dynamic parts of UML models. Following are the behavioral things: 
+A behavioral thing consists of the dynamic parts of UML models. Following are the behavioral things:
 
 
 
-### Interaction  
+### Interaction
 
 Interaction is basically a message exchange between two UML components. The following diagram represents different notations used in an interaction.
 
-![image](https://user-images.githubusercontent.com/37357447/189066892-92acae6a-ad99-4bbd-8354-902f923e596a.png)
-
 Interaction is used to represent the communication among the components of a system.
 
+![image](https://user-images.githubusercontent.com/37357447/189066892-92acae6a-ad99-4bbd-8354-902f923e596a.png)
 
 
-### State machine 
+
+### State machine
 
 State machine describes the different states of a component in its life cycle. The notations are described in the following diagram.
 
@@ -233,9 +234,9 @@ State machine is used to describe different states of a system component. The st
 
 ## Grouping Things
 
-Grouping things can be defined as a mechanism to group elements of a UML model together. There is only one grouping thing available −
+Grouping things can be defined as a mechanism to group elements of a UML model together. There is only one grouping thing available - package.
 
-### Package  
+### Package
 
 Package notation is shown in the following figure and is used to wrap the components of a system.
 
@@ -247,7 +248,7 @@ Package notation is shown in the following figure and is used to wrap the compon
 
 Annotational things can be defined as a mechanism to capture remarks, descriptions, and comments of UML model elements.
 
-### Note  
+### Note
 
 This notation is shown in the following figure. These notations are used to provide necessary information of a system.
 
@@ -259,7 +260,7 @@ This notation is shown in the following figure. These notations are used to prov
 
 Relationship is another most important building block of UML. It shows how the elements are associated with each other and this association describes the functionality of an application.
 
-There are six kinds of relationships available: 
+There are six kinds of relationships available:
 
 ![image](https://user-images.githubusercontent.com/37357447/189287006-99f6d5bd-c575-4c4b-b3d8-caea4c0a5e24.png)
 
@@ -271,7 +272,7 @@ Association is represented by a dotted line with (without) arrows on both sides.
 
 ![image](https://user-images.githubusercontent.com/37357447/189287811-19a21df2-115a-48fe-a455-534e4dc5587f.png)
 
-Association is used to represent the relationship between two elements of a system & basically a set of links that connects the elements of a UML model. It also describes how many objects are taking part in that relationship. 
+Association is used to represent the relationship between two elements of a system & basically a set of links that connects the elements of a UML model. It also describes how many objects are taking part in that relationship.
 
 ### Aggregation
 
@@ -312,7 +313,7 @@ Generalization is used to describe parent-child relationship of two elements of 
 
 
 
-## Realization
+## Realization(or Impletation)
 
 Realization can be defined as a relationship in which two elements are connected. One element describes some responsibility, which is not implemented and the other one implements them. This relationship exists in case of interfaces.
 
@@ -390,7 +391,7 @@ The purpose of the class diagram can be summarized as −
 
 #### How to Draw a Class Diagram?
 
-Class diagrams are the most popular UML diagrams used for construction of software applications. 
+Class diagrams are the most popular UML diagrams used for construction of software applications.
 
 Class diagram is basically a graphical representation of the static view of the system and represents different aspects of the application. A collection of class diagrams represent the whole system.
 
@@ -457,7 +458,7 @@ To capture a particular system, numbers of class diagrams are limited. However, 
 
 - ***Objects and links*** are the two elements used to construct an object diagram.
 
-- Same as Class Diagram: 
+- Same as Class Diagram:
 
   - The object diagram should have a ***meaningful name*** to indicate its purpose.
 
@@ -582,7 +583,7 @@ The purpose of deployment diagrams can be described as −
 
 #### How to Draw a Deployment Diagram?
 
-Deployment diagram represents the deployment view of a system. It is related to the component diagram because the components are deployed using the deployment diagrams. A deployment diagram consists of nodes. Nodes are nothing but physical hardware used to deploy the application.Deployment diagrams are useful for system engineers. 
+Deployment diagram represents the deployment view of a system. It is related to the component diagram because the components are deployed using the deployment diagrams. A deployment diagram consists of nodes. Nodes are nothing but physical hardware used to deploy the application.Deployment diagrams are useful for system engineers.
 
 
 
@@ -607,11 +608,9 @@ Following is a sample deployment diagram to provide an idea of the deployment vi
 
 
 
-The application is assumed to be a web-based application, which is deployed in a clustered environment using server 1, server 2, and server 3. The user connects to the application using the Internet. The control flows from the caching server to the clustered environment.
-
 The following deployment diagram has been drawn considering all the points mentioned above.
 
-![image](https://user-images.githubusercontent.com/37357447/189344211-ec834ebe-0aeb-43d2-9c33-0f040da9e6f7.png)
+![image](https://user-images.githubusercontent.com/37357447/197964509-313c5966-2403-4ef9-8196-ec6df4042c8d.png)
 
 
 
