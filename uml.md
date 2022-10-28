@@ -51,8 +51,8 @@
 
 ***Reference***
 
-+ https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/
 + https://www.tutorialspoint.com/uml/uml_building_blocks.htm
++ https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/
 + https://www.softwaretestinghelp.com/uml-diagram-tutorial/
 
 
@@ -360,7 +360,7 @@ Following are the various structural diagrams in UML:
 
 
 
-### Class diagram
+### ⭐️⭐️⭐️ Class diagram
 
 Class diagrams are the most common diagrams used in UML. Class diagram consists of classes, interfaces, associations, and collaboration. Class diagrams basically represent the object-oriented view of a system, which is static in nature.
 
@@ -446,7 +446,7 @@ The purpose of the object diagram can be summarized as −
 
 Class Diagrams & Object Diagram are both made of same basic elements but in different form. In class diagram elements are in abstract form to represent the blue print and in object diagram the elements are in concrete form to represent the real world object.
 
-To capture a particular system, numbers of class diagrams are limited. However, if we consider <u>object diagrams then we can have unlimited number of instances</u>, which are unique in nature. Only those instances are considered, which have an impact on the system.
+<u>To capture a particular system, numbers of class diagrams are limited. However, if we consider object diagrams then we can have unlimited number of instances, which are unique in nature.</u> Only those instances are considered, which have an impact on the system.
 
 1. From the above discussion, it is clear that a single object diagram cannot capture all the necessary instances or rather cannot specify all the objects of a system. Hence, the solution is −
 
@@ -469,6 +469,10 @@ To capture a particular system, numbers of class diagrams are limited. However, 
   - Values of ***different elements*** need to be captured to include in the object diagram.
 
   - Add ***proper notes*** at points where more clarity is required.
+
+
+
+#### Demo
 
 
 
@@ -506,15 +510,23 @@ In a nutshell, it can be said that object diagrams are used for −
 
 ### Component Diagrams
 
-Component diagrams are different in terms of nature and behavior. Component diagrams are used to model the physical aspects of a system. Now the question is, what are these physical aspects? Physical aspects are the elements such as executables, libraries, files, documents, etc. which reside in a node.
+Component diagrams are used to model the physical aspects of a system. Physical aspects are the elements such as executables, libraries, files, documents, etc. which reside in a node.
 
-Component diagrams are used to visualize the organization and relationships among components in a system. These diagrams are also used to make executable systems.
+
+
+Component diagrams are used to visualize the organization and relationships among components in a system. These diagrams are also used to make executable systems.Component diagrams can also be described as a static implementation view of a system. Static implementation represents the organization of the components at a particular moment.
+
+
+
+A single component diagram cannot represent the entire system but a collection of diagrams is used to represent the whole.
 
 
 
 #### Purpose of Component Diagrams
 
-A single component diagram cannot represent the entire system but a collection of diagrams is used to represent the whole.
+Component diagrams are used to describe the physical artifacts of a system. This artifact includes files, executables, libraries, etc.
+
+
 
 The purpose of the component diagram can be summarized as −
 
@@ -524,9 +536,16 @@ The purpose of the component diagram can be summarized as −
 
 
 
-#### How to Draw a Component Diagram?
+Component diagrams are used
 
-Component diagrams are used to describe the physical artifacts of a system. This artifact includes files, executables, libraries, etc. Component diagrams are used during the implementation phase of an application & in advance to visualize the implementation details & get an idea of the implementation. A well-prepared component diagram is also important for other aspects such as application performance, maintenance, etc.
++ during the **implementation phase** of an application
++ in advance to **visualize the implementation details**
++ **get an idea of the implementation** when the artifacts are ready
++ A well-prepared component diagram **is also important for other aspects** such as application performance, maintenance, etc.
+
+
+
+#### How to Draw a Component Diagram?
 
 
 
@@ -544,11 +563,15 @@ Component diagrams are used to describe the physical artifacts of a system. This
 
 
 
-Following is a component diagram for order management system. Here, the artifacts are files. The diagram shows the files in the application and their relationships. In actual, the component diagram also contains dlls, libraries, folders, etc.
+#### Demo
 
-In the following diagram, four files are identified and their relationships are produced. Component diagram cannot be matched directly with other UML diagrams discussed so far as it is drawn for completely different purpose.
 
-The following component diagram has been drawn considering all the points mentioned above.
+
+Following is a component diagram for order management system. Here, the artifacts are files. The diagram shows the files in the application and their relationships. In actual, the component diagram also contains dlls, libraries, folders, etc. In the following diagram, four files are identified and their relationships are produced.
+
+
+
+The following component diagram has been drawn considering all the points mentioned above. Component diagram cannot be matched directly with other UML diagrams discussed so far as it is drawn for completely different purpose.
 
 ![image](https://user-images.githubusercontent.com/37357447/189320133-21231360-62b9-4458-a32c-875990ade7a6.png)
 
@@ -561,29 +584,33 @@ Component diagrams can be used to −
 - Model the executables of an application.
 - Model the system's source code.
 
-### Deployment Diagrams
+### ⭐️⭐️⭐️ Deployment Diagrams
 
-Deployment diagrams are used to visualize the topology of the physical components of a system, where the software components are deployed.
-
-Deployment diagrams are used to describe the static deployment view of a system. Deployment diagrams consist of nodes and their relationships.
+Deployment diagrams are used to visualize the topology of the physical components of a system, where the software components are deployed. Deployment diagrams consist of nodes and their relationships.
 
 
 
-#### Purpose of Deployment Diagrams
+Deployment diagrams are used for describing the hardware components, where software components are deployed.
+
+
 
 Component diagrams and deployment diagrams are closely related. Component diagrams are used to describe the components and deployment diagrams shows how they are deployed in hardware, while these two diagrams are special diagrams used to focus on software and hardware components.
 
+#### Purpose of Deployment Diagrams
+
+
+
 The purpose of deployment diagrams can be described as −
 
-- Visualize the hardware topology of a system.
-- Describe the hardware components used to deploy software components.
-- Describe the runtime processing nodes.
+- Visualize the **hardware topology** of a system.
+- Describe the **hardware components** used to deploy software components.
+- Describe the **runtime processing nodes**.
 
 
 
 #### How to Draw a Deployment Diagram?
 
-Deployment diagram represents the deployment view of a system. It is related to the component diagram because the components are deployed using the deployment diagrams. A deployment diagram consists of nodes. Nodes are nothing but physical hardware used to deploy the application.Deployment diagrams are useful for system engineers.
+A deployment diagram consists of nodes. Nodes are nothing but physical hardware used to deploy the application.
 
 
 
@@ -599,16 +626,18 @@ Deployment diagram represents the deployment view of a system. It is related to 
 - ***Nodes***
 - ***Relationships among nodes***
 
+#### Demo
+
 Following is a sample deployment diagram to provide an idea of the deployment view of order management system. Here, we have shown nodes as −
 
-- Monitor
-- Modem
-- Caching server
-- Server
-
-
+- Web Browser
+- Nginx
+- Gategay
+- ...
 
 The following deployment diagram has been drawn considering all the points mentioned above.
+
+
 
 ![image](https://user-images.githubusercontent.com/37357447/197964509-313c5966-2403-4ef9-8196-ec6df4042c8d.png)
 
@@ -616,7 +645,12 @@ The following deployment diagram has been drawn considering all the points menti
 
 #### Where to Use Deployment Diagrams?
 
-Deployment diagrams can be used −
++ Deployment diagrams can be **visualized** as the hardware components/nodes on which the software components reside.
++ Efficient software applications are not sufficient to meet the **business requirements**. Business requirements can be described as the need to support the increasing number of users, quick response time, etc. Now-a-days software applications are very complex in nature. Software applications can be standalone, web-based, distributed, mainframe-based and many more. Hence, it is very important to design the hardware components efficiently.
+
+
+
+To meet these types of requirements, hardware components should be designed efficiently and in a cost-effective way. Deployment diagrams can be used −
 
 - To model the hardware topology of a system.
 - To model the embedded system.
@@ -626,15 +660,37 @@ Deployment diagrams can be used −
 
 ## Behavioral diagrams in UML
 
+
+
 Any real-world system can be represented in either a static form or a dynamic form. A system is said to be complete if it is expressed in both the static and dynamic ways. The behavioral diagram represents the functioning of a system.
 
 UML diagrams that deals with the static part of a system are called structural diagrams. UML diagrams that deals with the moving or dynamic parts of the system are called behavioral diagrams.
 
 Following are the various behavioral diagrams in UML:
 
-+ Activity diagram
 + Use case diagram
++ Activity diagram
 + State machine diagram
+
+### Use Case Diagrams
+
+To model a system, the most important aspect is to capture the dynamic behavior - <u>dynamic behavior</u> means the behavior of the system when it is running/operating. Only static behavior is not sufficient to model a system rather dynamic behavior is more important than static behavior.
+
+
+
+In UML, there are five diagrams available to model the dynamic nature and use case diagram is one of them. Use case diagram is used to model the system/subsystem of an application. A single use case diagram captures a particular functionality of a system. Hence to model the entire system, a number of use case diagrams are used.
+
+
+
+Use case diagrams consists of actors, use cases and their relationships.
+
+
+
+
+
+#### Purpose of Use Case Diagrams
+
+
 
 ## Interaction diagrams in UML
 
