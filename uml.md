@@ -54,6 +54,7 @@
 + https://www.tutorialspoint.com/uml/uml_building_blocks.htm
 + https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/
 + https://www.softwaretestinghelp.com/uml-diagram-tutorial/
++ https://en.wikipedia.org/wiki/Unified_Modeling_Language
 
 
 
@@ -99,9 +100,9 @@ A class represent a concept which encapsulates state (**attributes**) and behavi
 - The attribute type is shown after the colon.
 - Attributes map onto member variables (data members) in code.
 - Class Visibility: The +, - and # symbols before an attribute and operation name in a class denote the visibility of the attribute and operation.
-  - \+ denotes public attributes or operations
-  - \- denotes private attributes or operations
-  - \# denotes protected attributes or operations
+  - \+ denotes <u>public</u> attributes or operations
+  - \- denotes <u>private</u> attributes or operations
+  - \# denotes <u>protected</u> attributes or operations
 
 ![image](https://user-images.githubusercontent.com/37357447/189064885-c848eac8-e537-4ee2-8217-8ec43d38bd98.png)
 
@@ -114,7 +115,7 @@ A class represent a concept which encapsulates state (**attributes**) and behavi
 
 > Parameter Directionality: Each parameter in an operation (method) may be denoted as **in**, **out** or **inout** which specifies its direction with respect to the caller. This directionality is shown before the parameter name.
 >
-> *<u>But generally, you don't need to write In or Out</u>*
+> *<u>But generally, you don't need to write so</u>*
 > ![image](https://user-images.githubusercontent.com/37357447/189064812-27ca42ba-1eaf-4b14-995a-f88f39ee5a30.png)
 
 
@@ -125,7 +126,7 @@ A class represent a concept which encapsulates state (**attributes**) and behavi
 
 
 
-#### Active Class Notation
+##### Active Class Notation
 
 Active class looks similar to a class with a solid border. Active class is generally used to describe the concurrent behavior of a system.
 
@@ -137,7 +138,7 @@ Active class is used to represent the concurrency in a system.
 
 ### Object
 
-The *object* is represented in the same way as the class. The only difference is the *name* which is underlined as shown in the following figure.
+The *object* is represented in the same way as the class. <u>The only difference is the *name* which is underline</u>d as shown in the following figure.
 
 ![image](https://user-images.githubusercontent.com/37357447/189063705-ae7c9f8d-f5b3-4253-9d15-5de5973bd84d.png)
 
@@ -158,7 +159,7 @@ Collaboration is represented by a dotted eclipse as shown in the following figur
 
 ![image](https://user-images.githubusercontent.com/37357447/189063848-72662cd8-7cb2-4cee-af20-a1903377fed2.png)
 
-Collaboration represents responsibilities. Generally, responsibilities are in a group.
+<u>Collaboration represents responsibilities</u>. Generally, responsibilities are in a group.
 
 ### Use case
 
@@ -198,11 +199,11 @@ A component in UML is shown in the following figure with a name inside. Addition
 
 ![image](https://user-images.githubusercontent.com/37357447/189065286-c841d90a-6889-4200-8418-77f962146646.png)
 
-Component is used to represent any part of a system for which UML diagrams are made.
+Component is used to <u>represent any part of a system</u> for which UML diagrams are made.
 
 ### Node
 
-A node in UML is represented by a square box as shown in the following figure with a name. A node represents the physical component of the system.
+A node in UML is represented by a square box as shown in the following figure with a name. A node represents the <u>physical component</u> of the system.
 
 ![image](https://user-images.githubusercontent.com/37357447/189065323-49edfde4-d64a-4ebc-ab55-54a04b3ca8cb.png)
 
@@ -281,25 +282,25 @@ A special type of association.
 - It represents a "part of" relationship.
 - Class2 is part of Class1.
 - Many instances (denoted by the *) of Class2 can be associated with Class1.
-- Objects of Class1 and Class2 have separate lifetimes.
+- <u>Objects of Class1 and Class2 have separate lifetimes</u>.
 
 The figure below shows an example of aggregation. The relationship is displayed as a solid line with a unfilled diamond at the association end, which is connected to the class that represents the aggregate.
+
+> In my opinion, I guess using association datasheet (related ID) to implement this.
 
 ![image](https://user-images.githubusercontent.com/37357447/189286964-e2806fca-fdbc-4e2f-b772-054335376137.png)
 
 #### Composition
 
 - A special type of aggregation where parts are destroyed when the whole is destroyed.
-- Objects of Class2 live and die with Class1.
+- <u>Objects of Class2 live and die with Class1.</u>
 - Class2 cannot stand by itself.
 
 The figure below shows an example of composition. The relationship is displayed as a solid line with a filled diamond at the association end, which is connected to the class that represents the whole or composite.
 
+> In my opinion, I guess using extended subdatasheet (foreign key on delete) to implement this.
+
 ![Composition](https://cdn-images.visual-paradigm.com/guide/uml/uml-class-diagram-tutorial/13-composition.png)
-
-
-
-
 
 ## Inheritance(or Generalization)
 
@@ -310,8 +311,6 @@ Generalization is represented by an arrow with a hollow arrow head as shown in t
 ![image](https://user-images.githubusercontent.com/37357447/189072392-9fcf8553-8174-4079-9e37-62cc9e442e74.png)
 
 Generalization is used to describe parent-child relationship of two elements of a system.
-
-
 
 ## Realization(or Impletation)
 
@@ -332,18 +331,14 @@ Dependency is used to represent the dependency between two elements of a systemA
 
 
 
-
-
-
-
 # What is UML Diagram?
 
 ![1234](https://upload.wikimedia.org/wikipedia/commons/e/ed/UML_diagrams_overview.svg)
-UML diagrams are divided into three different categories such as,
+UML diagrams are divided into two different categories such as,
 
 + Structural diagram
 + Behavioral diagram
-+ Interaction diagram
++ Interaction diagram (UML 2.0)
 
 ## Structural diagrams in UML
 
@@ -357,12 +352,11 @@ Following are the various structural diagrams in UML:
 + Deployment diagram
 + Package diagram
 + Composite structure diagram
-
-
++ Profile diagram
 
 ### ⭐️⭐️⭐️ Class diagram
 
-Class diagrams are the most common diagrams used in UML. Class diagram consists of classes, interfaces, associations, and collaboration. Class diagrams basically represent the object-oriented view of a system, which is static in nature.
+Class diagrams are the most common diagrams used in UML. <u>Class diagram consists of classes, interfaces, associations, and collaboration.</u> Class diagrams basically represent the object-oriented view of a system, which is static in nature.
 
 Active class is used in a class diagram to represent the concurrency of the system.
 
@@ -404,9 +398,7 @@ The following points should be remembered while drawing a class diagram −
 - Use ***notes*** whenever required to describe some aspect of the diagram. At the end of the drawing it should be understandable to the developer/coder.
 - Finally, before making the final version, the diagram should be drawn on plain paper and ***reworked*** as many times as possible to make it correct.
 
-
-
-
+#### Demo
 
 The following diagram is an example of an Order System of an application. It describes a particular aspect of the entire application.
 
@@ -429,9 +421,13 @@ In a nutshell it can be said, class diagrams are used for −
 
 Object diagrams can be described as an instance of class diagram. Thus, these diagrams are more close to real-life scenarios where we implement a system.
 
-Object diagrams are a set of objects and their relationship is just like class diagrams. They also represent the static view of the system.
 
-The usage of object diagrams is similar to class diagrams but they are used to build prototype of a system from a practical perspective.
+
+Class Diagrams & Object Diagram are both made of same basic elements but in different form. In class diagram elements are in abstract form to represent the blue print and in object diagram the elements are in concrete form to represent the real world object.
+
+
+
+<u>To capture a particular system, numbers of class diagrams are limited. However, if we consider object diagrams then we can have unlimited number of instances, which are unique in nature.</u>
 
 #### Purpose of Object Diagrams
 
@@ -444,9 +440,7 @@ The purpose of the object diagram can be summarized as −
 
 #### How to Draw an Object Diagram?
 
-Class Diagrams & Object Diagram are both made of same basic elements but in different form. In class diagram elements are in abstract form to represent the blue print and in object diagram the elements are in concrete form to represent the real world object.
-
-<u>To capture a particular system, numbers of class diagrams are limited. However, if we consider object diagrams then we can have unlimited number of instances, which are unique in nature.</u> Only those instances are considered, which have an impact on the system.
+Only those instances are considered, which have an impact on the system.
 
 1. From the above discussion, it is clear that a single object diagram cannot capture all the necessary instances or rather cannot specify all the objects of a system. Hence, the solution is −
 
@@ -470,11 +464,7 @@ Class Diagrams & Object Diagram are both made of same basic elements but in diff
 
   - Add ***proper notes*** at points where more clarity is required.
 
-
-
 #### Demo
-
-
 
 The following diagram is an example of an object diagram. It represents the Order management system which we have discussed in the chapter Class Diagram. The following diagram is an instance of the system at a particular time of purchase. It has the following objects.
 
@@ -520,8 +510,6 @@ Component diagrams are used to visualize the organization and relationships amon
 
 A single component diagram cannot represent the entire system but a collection of diagrams is used to represent the whole.
 
-
-
 #### Purpose of Component Diagrams
 
 Component diagrams are used to describe the physical artifacts of a system. This artifact includes files, executables, libraries, etc.
@@ -543,11 +531,7 @@ Component diagrams are used
 + **get an idea of the implementation** when the artifacts are ready
 + A well-prepared component diagram **is also important for other aspects** such as application performance, maintenance, etc.
 
-
-
 #### How to Draw a Component Diagram?
-
-
 
 1. Before drawing a component diagram, the following artifacts are to be identified clearly −
 
@@ -561,11 +545,7 @@ Component diagrams are used
 - Prepare a ***mental layout*** before producing the using tools.
 - Use ***notes*** for clarifying important points.
 
-
-
 #### Demo
-
-
 
 Following is a component diagram for order management system. Here, the artifacts are files. The diagram shows the files in the application and their relationships. In actual, the component diagram also contains dlls, libraries, folders, etc. In the following diagram, four files are identified and their relationships are produced.
 
@@ -586,7 +566,7 @@ Component diagrams can be used to −
 
 ### ⭐️⭐️⭐️ Deployment Diagrams
 
-Deployment diagrams are used to visualize the topology of the physical components of a system, where the software components are deployed. Deployment diagrams consist of nodes and their relationships.
+<u>Deployment diagrams are used to visualize the topology of the physical components of a system, where the software components are deployed.</u> Deployment diagrams consist of nodes and their relationships.
 
 
 
@@ -597,8 +577,6 @@ Deployment diagrams are used for describing the hardware components, where softw
 Component diagrams and deployment diagrams are closely related. Component diagrams are used to describe the components and deployment diagrams shows how they are deployed in hardware, while these two diagrams are special diagrams used to focus on software and hardware components.
 
 #### Purpose of Deployment Diagrams
-
-
 
 The purpose of deployment diagrams can be described as −
 
@@ -658,6 +636,37 @@ To meet these types of requirements, hardware components should be designed effi
 - To model the hardware details of a distributed application.
 - For Forward and Reverse engineering.
 
+### Package Diagram(To be done...)
+
+#### Purpose of Package Diagrams
+
+#### How to Draw an Package Diagram?
+
+#### Demo
+
+#### Where to Use Package Diagrams?
+
+
+### Composite Structure Diagram(To be done...)
+
+#### Purpose of Composite Structure Diagrams
+
+#### How to Draw an Composite Structure Diagram?
+
+#### Demo
+
+#### Where to Use Composite Structure Diagrams?
+
+### Profile Diagram(To be done...)
+
+#### Purpose of Profile Diagrams
+
+#### How to Draw an Profile Diagram?
+
+#### Demo
+
+#### Where to Use Profile Diagrams?
+
 ## Behavioral diagrams in UML
 
 
@@ -678,18 +687,151 @@ To model a system, the most important aspect is to capture the dynamic behavior 
 
 
 
-In UML, there are five diagrams available to model the dynamic nature and use case diagram is one of them. Use case diagram is used to model the system/subsystem of an application. A single use case diagram captures a particular functionality of a system. Hence to model the entire system, a number of use case diagrams are used.
+In UML, there are five diagrams available to model the dynamic nature and use case diagram is one of them(Use case, Activity, Sequence, Collaboration, and Statechart). Use case diagram is used to model the system/subsystem of an application.
 
++ There should be some internal or external factors for making the interaction. These internal and external agents are known as `actors`.
++ Use case diagrams consists of actors, use cases and their relationships.
 
-
-Use case diagrams consists of actors, use cases and their relationships.
-
-
-
-
+Hence to model the entire system, a number of use case diagrams are used.
 
 #### Purpose of Use Case Diagrams
 
+In brief, the purposes of use case diagrams can be said to be as follows −
+
+- Used to gather the requirements of a system.
+- Used to get an outside view of a system.
+- Identify the external and internal factors influencing the system.
+- Show the interaction among the requirements are actors.
+
+#### How to Draw a Use Case Diagram?
+
+Use case diagrams are considered for high level requirement analysis of a system. When the requirements of a system are analyzed, the functionalities are captured in use cases.
+
++ We can say that use cases are nothing but the `system functionalities` written in an organized manner.
++ The second thing which is relevant to use cases are the `actors`. Actors can be defined as something that interacts with the system. <u>Actors can be a human user, some internal applications, or may be some external applications.</u>
+
+
+
+When we are planning to draw a use case diagram, we should have the following items identified:
+
+- **Functionalities** to be represented as use case
+- **Actors**
+- **Relationships** among the use cases and actors.
+
+
+
+After identifying the above items, we have to use the following guidelines to draw an efficient use case diagram:
+
+- The <u>name of a use case</u> is very important. The name should be chosen in such a way so that it can identify the functionalities performed.
+- Give a suitable <u>name for actors</u>.
+- Show <u>relationships and dependencies</u> clearly in the diagram.
+- <u>Do not try to include all types of relationships</u>, as the main purpose of the diagram is to identify the requirements.
+- <u>Use notes</u> whenever required to clarify some important points.
+
+#### Demo
+
+Following is a sample use case diagram representing the <u>order management system</u>. Hence, if we look into the diagram then we will find three use cases **(Order, SpecialOrder, and NormalOrder)** and one actor which is the customer.
+
+
+
+The SpecialOrder and NormalOrder use cases are extended from *Order* use case. Hence, they have extended relationship. Another important point is to identify the system boundary, which is shown in the picture. The actor Customer lies outside the system as it is an external user of the system.
+
+
+
+![image](https://user-images.githubusercontent.com/37357447/200495092-a9e21299-0e59-4ee4-8879-050234ef90a7.png)
+
+
+
+#### Where to Use a Use Case Diagram?
+
+The specific purpose of Use case diagram is to gather system requirements and actors.
+
+
+
+Use case diagrams specify the events of a system and their flows. But use case diagram never describes how they are implemented. <u>Use case diagram can be imagined as a black box where only the input, output, and the function of the black box is known.</u>
+
+
+
+This high level design is refined again and again to get a complete and practical picture of the system. <u>A well-structured use case also describes the pre-condition, post condition, and exceptions.</u> These extra elements are used to make test cases when performing the testing.
+
+
+
+Although use case is not a good candidate for forward and reverse engineering, still they are used in a slightly different way to make forward and reverse engineering.
+
++ In forward engineering, use case diagrams are used to make test cases and in reverse engineering use cases are used to prepare the requirement details from the existing application.
+
+
+
+Briefly, use case diagrams can be used for −
+
+- Requirement analysis and high level design.
+- Model the context of a system.
+- Reverse engineering.
+- Forward engineering.
+
+
+
+### Activity Diagram
+
+<u>Activity diagram is basically a flowchart to represent the flow from one activity to another activity</u>. The activity can be described as an operation of the system.
+
+#### Purpose of Activity Diagrams
+
+Activity diagram is used to show message flow from one activity to another. Activity diagrams are not only used for visualizing the dynamic nature of a system, but they are also used to construct the executable system by using forward and reverse engineering techniques.
+
+
+
+The only missing thing in the activity diagram is the message part.It does not show any message flow from one activity to another.
+
+
+
+The control flow is drawn from one operation to another. This flow can be sequential, branched, or concurrent. Activity diagrams deal with all type of flow control by using different elements such as fork, join, etc.
+
+
+
+The purpose of an activity diagram can be described as −
+
+- Draw the activity flow of a system.
+- Describe the sequence from one activity to another.
+- Describe the parallel, branched and concurrent flow of the system.
+
+#### How to Draw an Activity Diagram?
+
+Activity diagrams are not exactly flowcharts as they have some additional capabilities:
+
++ Activity diagrams are mainly used as a flowchart that consists of activities performed by the system.
++ The additional capabilities include branching, parallel flow, swimlane, etc.
+
+
+
+Before drawing an activity diagram, we should identify the following elements −
+
+- `Activities`. An activity is a function performed by the system. After identifying the activities, we need to understand how they are associated with constraints and conditions.
+- Association
+- Conditions
+- Constraints
+
+
+
+
+
+#### Demo
+
+#### Where to Use Activity Diagrams?
+
+
+
+
+
+### Statechart Diagram
+
+#### Purpose of Statechart Diagrams
+
+#### How to Draw an Statechart Diagram?
+
+#### Demo
+
+#### Where to Use Statechart Diagrams?
 
 
 ## Interaction diagrams in UML
@@ -698,6 +840,14 @@ Interaction diagram is nothing but a subset of behavioral diagrams. It is used t
 
 Following are the various interaction diagrams in UML:
 
-+ Timing diagram
-+ Sequence diagram
-+ Collaboration diagram
++ Timing diagram (UML 2.0)
++ Sequence diagram (UML 2.0)
++ Communication diagram / Collaboration diagram (UML 2.0)
++ Interaction Overview diagram (UML 2.0)
+
+### Interaction diagrams in UML 1.0
+
+
+
+# UML 2.0 - Overview
+
