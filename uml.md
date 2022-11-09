@@ -24,28 +24,64 @@
     - [Aggregation](#aggregation)
       - [Composition](#composition)
   - [Inheritance(or Generalization)](#inheritanceor-generalization)
-  - [Realization](#realization)
+  - [Realization(or Impletation)](#realizationor-impletation)
   - [Dependency](#dependency)
 - [What is UML Diagram?](#what-is-uml-diagram)
   - [Structural diagrams in UML](#structural-diagrams-in-uml)
-    - [Class diagram](#class-diagram)
+    - [⭐️⭐️⭐️ Class diagram](#️️️-class-diagram)
       - [Purpose of Class Diagrams](#purpose-of-class-diagrams)
       - [How to Draw a Class Diagram?](#how-to-draw-a-class-diagram)
+      - [Demo](#demo)
       - [Where to Use Class Diagrams?](#where-to-use-class-diagrams)
     - [Object Diagram](#object-diagram)
       - [Purpose of Object Diagrams](#purpose-of-object-diagrams)
       - [How to Draw an Object Diagram?](#how-to-draw-an-object-diagram)
+      - [Demo](#demo-1)
       - [Where to Use Object Diagrams?](#where-to-use-object-diagrams)
     - [Component Diagrams](#component-diagrams)
       - [Purpose of Component Diagrams](#purpose-of-component-diagrams)
       - [How to Draw a Component Diagram?](#how-to-draw-a-component-diagram)
+      - [Demo](#demo-2)
       - [Where to Use Component Diagrams?](#where-to-use-component-diagrams)
-    - [Deployment Diagrams](#deployment-diagrams)
+    - [⭐️⭐️⭐️ Deployment Diagrams](#️️️-deployment-diagrams)
       - [Purpose of Deployment Diagrams](#purpose-of-deployment-diagrams)
       - [How to Draw a Deployment Diagram?](#how-to-draw-a-deployment-diagram)
+      - [Demo](#demo-3)
       - [Where to Use Deployment Diagrams?](#where-to-use-deployment-diagrams)
+    - [Package Diagram(To be done...)](#package-diagramto-be-done)
+      - [Purpose of Package Diagrams](#purpose-of-package-diagrams)
+      - [How to Draw an Package Diagram?](#how-to-draw-an-package-diagram)
+      - [Demo](#demo-4)
+      - [Where to Use Package Diagrams?](#where-to-use-package-diagrams)
+    - [Composite Structure Diagram(To be done...)](#composite-structure-diagramto-be-done)
+      - [Purpose of Composite Structure Diagrams](#purpose-of-composite-structure-diagrams)
+      - [How to Draw an Composite Structure Diagram?](#how-to-draw-an-composite-structure-diagram)
+      - [Demo](#demo-5)
+      - [Where to Use Composite Structure Diagrams?](#where-to-use-composite-structure-diagrams)
+    - [Profile Diagram(To be done...)](#profile-diagramto-be-done)
+      - [Purpose of Profile Diagrams](#purpose-of-profile-diagrams)
+      - [How to Draw an Profile Diagram?](#how-to-draw-an-profile-diagram)
+      - [Demo](#demo-6)
+      - [Where to Use Profile Diagrams?](#where-to-use-profile-diagrams)
   - [Behavioral diagrams in UML](#behavioral-diagrams-in-uml)
+    - [Use Case Diagrams](#use-case-diagrams)
+      - [Purpose of Use Case Diagrams](#purpose-of-use-case-diagrams)
+      - [How to Draw a Use Case Diagram?](#how-to-draw-a-use-case-diagram)
+      - [Demo](#demo-7)
+      - [Where to Use a Use Case Diagram?](#where-to-use-a-use-case-diagram)
+    - [Activity Diagram](#activity-diagram)
+      - [Purpose of Activity Diagrams](#purpose-of-activity-diagrams)
+      - [How to Draw an Activity Diagram?](#how-to-draw-an-activity-diagram)
+      - [Demo](#demo-8)
+      - [Where to Use Activity Diagrams?](#where-to-use-activity-diagrams)
+    - [Statechart Diagram](#statechart-diagram)
+      - [Purpose of Statechart Diagrams](#purpose-of-statechart-diagrams)
+      - [How to Draw an Statechart Diagram?](#how-to-draw-an-statechart-diagram)
+      - [Demo](#demo-9)
+      - [Where to Use Statechart Diagrams?](#where-to-use-statechart-diagrams)
   - [Interaction diagrams in UML](#interaction-diagrams-in-uml)
+    - [Interaction diagrams in UML 1.0](#interaction-diagrams-in-uml-10)
+- [UML 2.0 - Overview](#uml-20---overview)
 
 # Before you start
 
@@ -66,6 +102,8 @@ Following object-oriented concepts are required to begin with UML:
 + Inheritance: It is a mechanism of extending an existing class to create a new class.
 + Polymorphism: It is a mechanism of representing an object having multiple forms which are used for different purposes.
 + Encapsulation: It is a method of binding the object and the data together as a single unit. It ensures tight coupling between the object and the data.
+
+> Learning tip: learing diagram first, if any question about `building blocks`, review [Things](#things) & [Relationship](#relationship)
 
 
 
@@ -789,6 +827,10 @@ The control flow is drawn from one operation to another. This flow can be sequen
 
 
 
+One important point should be clearly understood that an activity diagram cannot be exactly matched with the code. <u>The activity diagram is made to understand the flow of activities and is mainly used by the business users</u>.
+
+
+
 The purpose of an activity diagram can be described as −
 
 - Draw the activity flow of a system.
@@ -813,25 +855,125 @@ Before drawing an activity diagram, we should identify the following elements �
 
 
 
+Once the above-mentioned parameters are identified, we need to make a <u>mental layout</u> of the entire flow. This mental layout is then transformed into an activity diagram.
+
 
 
 #### Demo
 
+Following is an example of an activity diagram for order management system. In the diagram, four activities are identified which are associated with conditions.
+
+
+
+Following diagram is drawn with the four main activities −
+
+- Send order by the customer
+- Receipt of the order
+- Confirm the order
+- Dispatch the order
+
+As the following show, after receiving the order request, condition checks are performed to check if it is normal or special order. After the type of order is identified, dispatch activity is performed and that is marked as the termination of the process.
+
+
+
+![image](https://user-images.githubusercontent.com/37357447/200762170-c881717a-71bb-4d35-a66e-34bd65acd941.png)
+
 #### Where to Use Activity Diagrams?
 
+Activity diagram is suitable for modeling the activity flow of the system. Activity diagram also captures these systems and describes the flow from one system to another. An application can have multiple systems. These systems can be database, external queues, or any other system.
 
+
+
+This diagram is used to model the activities which are nothing but business requirements. The diagram has more impact on business understanding rather than on implementation details.
+
+
+
+Activity diagram can be used for −
+
+- Modeling work flow by using activities.
+- Modeling business requirements.
+- High level understanding of the system's functionalities.
+- Investigating business requirements at a later stage.
 
 
 
 ### Statechart Diagram
 
+Statechart diagram is used to describe the states of different objects in its life cycle. <u>This diagram describes different states of a component in a system</u>. The states are specific to a component/object of a system.
+
+
+
+A Statechart diagram describes a <u>state machine</u>. State machine can be defined as a machine which defines different states of an object and these states are controlled by external or internal events.
+
 #### Purpose of Statechart Diagrams
+
+Statechart diagrams are useful to model the reactive systems. Reactive systems can be defined as a system that responds to external or internal events.
+
+
+
+Statechart diagram describes the flow of control from one state to another state. States are defined as a condition in which an object exists and it changes when some event is triggered. <u>The most important purpose of Statechart diagram is to model lifetime of an object from creation to termination.</u>
+
+
+
+Statechart diagrams are also used for forward and reverse engineering of a system. However, the main purpose is to model the reactive system.
+
+
+
+Following are the main purposes of using Statechart diagrams −
+
+- To model the dynamic aspect of a system.
+- To model the life time of a reactive system.
+- To describe different states of an object during its life time.
+- Define a state machine to model the states of an object.
 
 #### How to Draw an Statechart Diagram?
 
+Statechart diagrams are very important for describing the states. States can be identified as the condition of objects when a particular event occurs. Emphasis is placed on the state changes upon some internal or external events. These states of objects are important to analyze and implement them accurately.
+
+
+
+Before drawing a Statechart diagram we should clarify the following points −
+
+- Identify the `important objects` to be analyzed.
+- Identify the `states`.
+- Identify the `events`.
+
 #### Demo
 
+Following is an example of a Statechart diagram where the state of Order object is analyzed.
+
++ The first state is an idle state from where the process starts.
++ The next states are arrived for events like send request, confirm request, and dispatch order.
++ These events are responsible for the state changes of order object.
+
+During the life cycle of an object (here order object) it goes through the following states and there may be some `abnormal` exits. This abnormal exit may occur due to some problem in the system. When the entire life cycle is complete, it is considered as a complete transaction as shown in the following figure. The initial and final state of an object is also shown in the following figure.
+
+
+
+![image](https://user-images.githubusercontent.com/37357447/200793449-19aa282c-d5f8-48c7-966b-899be6450b86.png)
+
 #### Where to Use Statechart Diagrams?
+
+Statechart diagram defines the states of a component and these state changes are dynamic in nature. Its specific purpose is to define the state changes triggered by events. Events are internal or external factors influencing the system.
+
+
+
+Statechart diagrams are used to model the states and also the events operating on the system. <u>When implementing a system, it is very important to clarify different states of an object during its life time and Statechart diagrams are used for this purpose.</u> When these states and events are identified, they are used to model it and these models are used during the implementation of the system.
+
+
+
+If we look into the practical implementation of Statechart diagram, then it is mainly used to analyze the object states influenced by events. This analysis is helpful to understand the system behavior during its execution.
+
+
+
+The main usage can be described as −
+
+- To model the object states of a system.
+- To model the reactive system. Reactive system consists of reactive objects.
+- To identify the events responsible for state changes.
+- Forward and reverse engineering.
+
+
 
 
 ## Interaction diagrams in UML
