@@ -125,11 +125,36 @@ Strategy design patterns
 
 Creational design patterns abstract the instantiation process. They help make a system independent of how its objects are created, composed, and represented.
 
-Creational patterns become important as systems evolve to depend more on
-object composition than class inheritance. As that happens, emphasis shifts away
+
+
+<u>A class creational pattern uses inheritance to vary the class that’s instantiated</u>, whereas an object creational pattern will delegate instantiation to another object.
+
+
+
+Emphasis creational patterns shifts away
 from hard-coding a fixed set of behaviors toward defining a smaller set of
 fundamental behaviors that can be composed into any number of more complex
-ones.
+ones. Thus creating objects with particular behaviors requires more than simply
+instantiating a class.
+
+
+
+There are some recurring themes in these patterns.
+
++ First, they all encapsulate knowledge about which concrete classes the system uses.
++ Second, they hide how instances of these classes are created and put together.
++ All the system at large
+  knows about the objects is their interfaces as defined by abstract classes.
+
+Consequently, the creational patterns give you a lot of flexibility in what gets
+created, who creates it, how it gets created, and when. They let you configure a
+system with “product” objects that vary widely in structure and functionality.
+Configuration can be static (that is, specified at compile-time) or dynamic (at
+run-time).
+
+
+
+The creational patterns are closely related. For example, there are cases when either [Prototype](#P)  or Abstract Factory (87) could be used profitably. At other times they are complementary: Builder (97) can use one of the other patterns to implement which components get built. Prototype (117) can use Singleton (127) in its implementation
 
 ## Abstract Factory
 
@@ -339,7 +364,6 @@ representations.
 ## Visitor
 
 ### Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
-
 
 
 
