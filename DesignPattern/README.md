@@ -100,12 +100,12 @@
 
 ## Design pattern space
 
-![](file/Screen Shot 2022-10-14 at 10.37.55.png)
+<img width="518" alt="Screen Shot 2022-10-14 at 10 37 55" src="https://user-images.githubusercontent.com/37357447/200979255-6d2b53d9-b872-4582-92ec-85a8bf62e13a.png">
 
 
 ## Pattern Relation
 
-![Screen Shot 2022-10-13 at 17.44.55](file/PatternRelation.png)
+<img width="596" alt="PatternRelation" src="https://user-images.githubusercontent.com/37357447/200979359-70aae8ff-3f49-4b2a-99ab-150ba43da0e3.png">
 
 
 
@@ -339,6 +339,7 @@ representations.
 ## Visitor
 
 ### Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
+
 
 
 
