@@ -83,10 +83,14 @@
 
 + [java 设计模式及实践](Java设计模式及实践.pdf)
 
++ https://refactoringguru.cn/design-patterns/abstract-factory
+
 之后参考进行深入学习
 
 + [Design Patterns Implement By Java](  https://java-design-patterns.com/patterns/)
 
+> 注意: 千万注意: 菜鸟教程的设计模式教程很多是错误的 ! 千万不要图方便去学这个教程 (例如抽象工厂就是完全错误的)  
+> 当然个人其实完全不建议用菜鸟教程
 # Code Practise
 
 + [Java - ongoing](Java)
@@ -111,15 +115,11 @@
 
 ## Design Pattern In MVC architect
 
-The View-Controller relationship is an example of the Strategy (315) design
-pattern. A Strategy is an object that represents an algorithm. It’s useful when you
-want to replace the algorithm either statically or dynamically, when you have a
-lot of variants of the algorithm, or when the algorithm has complex data
-structures that you want to encapsulate.  
-MVC uses other design patterns, such as Factory Method (107) to specify the
-default controller class for a view and Decorator (175) to add scrolling to a view.
-But the main relationships in MVC are given by the Observer, Composite, and
-Strategy design patterns
+The View-Controller relationship is an example of the Strategy (315) design pattern. A Strategy is an object that represents an algorithm. It’s useful when you want to replace the algorithm either statically or dynamically, when you have a lot of variants of the algorithm, or when the algorithm has complex data structures that you want to encapsulate.
+
+
+
+MVC uses other design patterns, such as Factory Method (107) to specify the default controller class for a view and Decorator (175) to add scrolling to a view. But the main relationships in MVC are given by the Observer, Composite, and Strategy design patterns
 
 # Cretional Patterns
 
@@ -131,11 +131,7 @@ Creational design patterns abstract the instantiation process. They help make a 
 
 
 
-Emphasis creational patterns shifts away
-from hard-coding a fixed set of behaviors toward defining a smaller set of
-fundamental behaviors that can be composed into any number of more complex
-ones. Thus creating objects with particular behaviors requires more than simply
-instantiating a class.
+Emphasis creational patterns shifts away from hard-coding a fixed set of behaviors toward defining a smaller set of fundamental behaviors that can be composed into any number of more complex ones. Thus creating objects with particular behaviors requires more than simply instantiating a class.
 
 
 
@@ -143,8 +139,7 @@ There are some recurring themes in these patterns.
 
 + First, they all encapsulate knowledge about which concrete classes the system uses.
 + Second, they hide how instances of these classes are created and put together.
-+ All the system at large
-  knows about the objects is their interfaces as defined by abstract classes.
++ All the system at large knows about the objects is their interfaces as defined by abstract classes.
 
 Consequently, the creational patterns give you a lot of flexibility in what gets
 created, who creates it, how it gets created, and when. They let you configure a
@@ -154,17 +149,37 @@ run-time).
 
 
 
-The creational patterns are closely related. For example, there are cases when either [Prototype](#P)  or Abstract Factory (87) could be used profitably. At other times they are complementary: Builder (97) can use one of the other patterns to implement which components get built. Prototype (117) can use Singleton (127) in its implementation
+The creational patterns are closely related. For example, there are cases when either Prototype or Abstract Factory could be used profitably. At other times they are complementary: Builder can use one of the other patterns to implement which components get built. Prototype can use Singleton in its implementation
 
 ## Abstract Factory
 
 ### Indent
 
-#### Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+
+
+If the system output needs to interact with many products of different kinds, for the reason that the architect may not get the comprehensive information in advance or may consider of the scalability of system, the architect do not want to construct system based on the specific class. In this situation, you can use Abstract Factory Disign Pattern to build system.
+
+### Motivation
+
+Consider a user interface toolkit that supports multiple look-and-feel standards, such as `StandardA` and `StandardB`. Different look-and-feels define different appearances and behaviors for user interface “output” like scroll `Window`, `Scroll`, and `Button`.
+
+
+
+To be portable across look-and-feel standards, an application should not hard-code its output for a particular look and feel.
+
+
+
+We can solve this problem by defining an `AbstractFactory` class that declares an interface for creating each basic kind of output and concretes subclasses implement output for specific look-and-feel standards(`StandardA` and `StandardB`). 
 
 ### Uml
 
 ![](./uml/Abstract%20Factory.png)
+
+### Show Me The Code
+[abstract_function](./code/Java/src/main/java/creational_patterns/abstract_function)
+
 
 ### Consequences
 
@@ -189,8 +204,6 @@ Extending abstract factories to produce new kinds of Products isn’t easy. That
 ### Implementation
 
 Here are some useful techniques for implementing the Abstract Factory pattern.
-
-#### 
 
 #### Factories as singletons.
 
