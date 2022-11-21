@@ -339,7 +339,23 @@ For example, AbstractFactory only needs a single “Make” operation with a par
 
 Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
 
+### Motivation
 
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 ## Builder
 
