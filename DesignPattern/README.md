@@ -1,73 +1,170 @@
 - [设计模式](#设计模式)
 - [Code Practise](#code-practise)
 - [Brief](#brief)
-    - [Design pattern space](#design-pattern-space)
-    - [Pattern Relation](#pattern-relation)
-    - [Design Pattern In MVC architect](#design-pattern-in-mvc-architect)
+	- [Design pattern space](#design-pattern-space)
+	- [Pattern Relation](#pattern-relation)
+	- [Design Pattern In MVC architect](#design-pattern-in-mvc-architect)
 - [Cretional Patterns](#cretional-patterns)
-    - [Abstract Factory](#abstract-factory)
-        - [Indent](#indent)
-            - [Provide an interface for creating families of related or dependent objects without specifying their concrete classes.](#provide-an-interface-for-creating-families-of-related-or-dependent-objects-without-specifying-their-concrete-classes)
-        - [Uml](#uml)
-        - [Consequences](#consequences)
-            - [Isolates concrete classes](#isolates-concrete-classes)
-            - [It makes exchanging product families easy](#it-makes-exchanging-product-families-easy)
-            - [It promotes consistency among products.](#it-promotes-consistency-among-products)
-            - [But Supporting new kinds of products is difficult.](#but-supporting-new-kinds-of-products-is-difficult)
-        - [Implementation](#implementation)
-            - [](#)
-            - [Factories as singletons.](#factories-as-singletons)
-            - [Creating the products](#creating-the-products)
-            - [Defining extensible factories](#defining-extensible-factories)
-            - [](#-1)
-            - [](#-2)
-            - [](#-3)
-    - [Factory Method](#factory-method)
-        - [Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.](#define-an-interface-for-creating-an-object-but-let-subclasses-decide-which-class-to-instantiate-factory-method-lets-a-class-defer-instantiation-to-subclasses)
-    - [Builder](#builder)
-        - [Separate the construction of a complex object from its representation so that the same construction process can create different](#separate-the-construction-of-a-complex-object-from-its-representation-so-that-the-same-construction-process-can-create-different)
-    - [Prototype](#prototype)
-        - [Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.](#specify-the-kinds-of-objects-to-create-using-a-prototypical-instance-and-create-new-objects-by-copying-this-prototype)
-    - [Singleton](#singleton)
-        - [Ensure a class only has one instance, and provide a global point of access to it.](#ensure-a-class-only-has-one-instance-and-provide-a-global-point-of-access-to-it)
+	- [Abstract Factory](#abstract-factory)
+		- [Indent](#indent)
+		- [Motivation](#motivation)
+		- [Uml](#uml)
+		- [Show Me The Code](#show-me-the-code)
+		- [Consequences](#consequences)
+			- [Isolates concrete classes](#isolates-concrete-classes)
+			- [It makes exchanging product families easy](#it-makes-exchanging-product-families-easy)
+			- [It promotes consistency among products.](#it-promotes-consistency-among-products)
+			- [Supporting new kinds of products is difficult.](#supporting-new-kinds-of-products-is-difficult)
+		- [Implementation](#implementation)
+			- [Factories as singletons.](#factories-as-singletons)
+			- [Creating the products](#creating-the-products)
+			- [Defining extensible factories](#defining-extensible-factories)
+	- [Factory Method](#factory-method)
+		- [Indent](#indent-1)
+	- [Builder](#builder)
+		- [Indent](#indent-2)
+		- [Motivation](#motivation-1)
+		- [UML](#uml-1)
+		- [Show Me The Code](#show-me-the-code-1)
+		- [Consequences](#consequences-1)
+		- [Implementation](#implementation-1)
+	- [Prototype](#prototype)
+		- [Indent](#indent-3)
+		- [Motivation](#motivation-2)
+		- [UML](#uml-2)
+		- [Show Me The Code](#show-me-the-code-2)
+		- [Consequences](#consequences-2)
+		- [Implementation](#implementation-2)
+	- [Singleton](#singleton)
+		- [Indent](#indent-4)
+		- [Motivation](#motivation-3)
+		- [UML](#uml-3)
+		- [Show Me The Code](#show-me-the-code-3)
+		- [Consequences](#consequences-3)
+		- [Implementation](#implementation-3)
 - [Structural Patterns](#structural-patterns)
-    - [Adapter](#adapter)
-        - [Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.](#convert-the-interface-of-a-class-into-another-interface-clients-expect-adapter-lets-classes-work-together-that-couldnt-otherwise-because-of-incompatible-interfaces)
-    - [Bridge](#bridge)
-        - [Decouple an abstraction from its implementation so that the two can vary independently.](#decouple-an-abstraction-from-its-implementation-so-that-the-two-can-vary-independently)
-    - [Composite](#composite)
-        - [Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly](#compose-objects-into-tree-structures-to-represent-part-whole-hierarchies-composite-lets-clients-treat-individual-objects-and-compositions-of-objects-uniformly)
-    - [Decorator](#decorator)
-        - [Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.](#attach-additional-responsibilities-to-an-object-dynamically-decorators-provide-a-flexible-alternative-to-subclassing-for-extending-functionality)
-    - [Facade](#facade)
-        - [Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.](#provide-a-unified-interface-to-a-set-of-interfaces-in-a-subsystem-facade-defines-a-higher-level-interface-that-makes-the-subsystem-easier-to-use)
-    - [Flyweight](#flyweight)
-        - [Use sharing to support large numbers of fine-grained objects efficiently.](#use-sharing-to-support-large-numbers-of-fine-grained-objects-efficiently)
-    - [Proxy](#proxy)
-        - [Provide a surrogate or placeholder for another object to control](#provide-a-surrogate-or-placeholder-for-another-object-to-control)
+	- [Adapter](#adapter)
+		- [Indent](#indent-5)
+		- [Motivation](#motivation-4)
+		- [UML](#uml-4)
+		- [Show Me The Code](#show-me-the-code-4)
+		- [Consequences](#consequences-4)
+		- [Implementation](#implementation-4)
+	- [Bridge](#bridge)
+		- [Indent](#indent-6)
+		- [Motivation](#motivation-5)
+		- [UML](#uml-5)
+		- [Show Me The Code](#show-me-the-code-5)
+		- [Consequences](#consequences-5)
+		- [Implementation](#implementation-5)
+	- [Composite](#composite)
+		- [Indent](#indent-7)
+		- [Motivation](#motivation-6)
+		- [UML](#uml-6)
+		- [Show Me The Code](#show-me-the-code-6)
+		- [Consequences](#consequences-6)
+		- [Implementation](#implementation-6)
+	- [Decorator](#decorator)
+		- [Indent](#indent-8)
+		- [Motivation](#motivation-7)
+		- [UML](#uml-7)
+		- [Show Me The Code](#show-me-the-code-7)
+		- [Consequences](#consequences-7)
+		- [Implementation](#implementation-7)
+	- [Facade](#facade)
+		- [Indent](#indent-9)
+		- [Motivation](#motivation-8)
+		- [UML](#uml-8)
+		- [Show Me The Code](#show-me-the-code-8)
+		- [Consequences](#consequences-8)
+		- [Implementation](#implementation-8)
+	- [Flyweight](#flyweight)
+		- [Indent](#indent-10)
+		- [Motivation](#motivation-9)
+		- [UML](#uml-9)
+		- [Show Me The Code](#show-me-the-code-9)
+		- [Consequences](#consequences-9)
+		- [Implementation](#implementation-9)
+	- [Proxy](#proxy)
+		- [Indent](#indent-11)
+		- [Motivation](#motivation-10)
+		- [UML](#uml-10)
+		- [Show Me The Code](#show-me-the-code-10)
+		- [Consequences](#consequences-10)
+		- [Implementation](#implementation-10)
 - [Behavioral Patterns](#behavioral-patterns)
-    - [Chain of Reponsibility](#chain-of-reponsibility)
-        - [Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.](#avoid-coupling-the-sender-of-a-request-to-its-receiver-by-giving-more-than-one-object-a-chance-to-handle-the-request-chain-the-receiving-objects-and-pass-the-request-along-the-chain-until-an-object-handles-it)
-    - [Command](#command)
-        - [Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.](#encapsulate-a-request-as-an-object-thereby-letting-you-parameterize-clients-with-different-requests-queue-or-log-requests-and-support-undoable-operations)
-    - [Interpreter](#interpreter)
-        - [Given a language, define a represention for its grammar along with an interpreter that uses the representation to interpret sentences in the language.](#given-a-language-define-a-represention-for-its-grammar-along-with-an-interpreter-that-uses-the-representation-to-interpret-sentences-in-the-language)
-    - [Iterator](#iterator)
-        - [Given a language, define a represention for its grammar along with an interpreter that uses the representation to interpret sentences in the language.](#given-a-language-define-a-represention-for-its-grammar-along-with-an-interpreter-that-uses-the-representation-to-interpret-sentences-in-the-language-1)
-    - [Mediator](#mediator)
-        - [Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently](#define-an-object-that-encapsulates-how-a-set-of-objects-interact-mediator-promotes-loose-coupling-by-keeping-objects-from-referring-to-each-other-explicitly-and-it-lets-you-vary-their-interaction-independently)
-    - [Memento](#memento)
-        - [Without violating encapsulation, capture and externalize an object’s internal state so that the object can be restored to this state later.](#without-violating-encapsulation-capture-and-externalize-an-objects-internal-state-so-that-the-object-can-be-restored-to-this-state-later)
-    - [Observer](#observer)
-        - [Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.](#define-a-one-to-many-dependency-between-objects-so-that-when-one-object-changes-state-all-its-dependents-are-notified-and-updated-automatically)
-    - [State](#state)
-        - [Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.](#allow-an-object-to-alter-its-behavior-when-its-internal-state-changes-the-object-will-appear-to-change-its-class)
-    - [Strategy](#strategy)
-        - [Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.](#define-a-family-of-algorithms-encapsulate-each-one-and-make-them-interchangeable-strategy-lets-the-algorithm-vary-independently-from-clients-that-use-it)
-    - [Template Method](#template-method)
-        - [Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.](#define-the-skeleton-of-an-algorithm-in-an-operation-deferring-some-steps-to-subclasses-template-method-lets-subclasses-redefine-certain-steps-of-an-algorithm-without-changing-the-algorithms-structure)
-    - [Visitor](#visitor)
-        - [Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.](#represent-an-operation-to-be-performed-on-the-elements-of-an-object-structure-visitor-lets-you-define-a-new-operation-without-changing-the-classes-of-the-elements-on-which-it-operates)
+	- [Chain of Reponsibility](#chain-of-reponsibility)
+		- [Indent](#indent-12)
+	- [Command](#command)
+		- [Indent](#indent-13)
+		- [Motivation](#motivation-11)
+		- [UML](#uml-11)
+		- [Show Me The Code](#show-me-the-code-11)
+		- [Consequences](#consequences-11)
+		- [Implementation](#implementation-11)
+	- [Interpreter](#interpreter)
+		- [Indent](#indent-14)
+		- [Motivation](#motivation-12)
+		- [UML](#uml-12)
+		- [Show Me The Code](#show-me-the-code-12)
+		- [Consequences](#consequences-12)
+		- [Implementation](#implementation-12)
+	- [Iterator](#iterator)
+		- [Indent](#indent-15)
+		- [Motivation](#motivation-13)
+		- [UML](#uml-13)
+		- [Show Me The Code](#show-me-the-code-13)
+		- [Consequences](#consequences-13)
+		- [Implementation](#implementation-13)
+	- [Mediator](#mediator)
+		- [Indent](#indent-16)
+		- [Motivation](#motivation-14)
+		- [UML](#uml-14)
+		- [Show Me The Code](#show-me-the-code-14)
+		- [Consequences](#consequences-14)
+		- [Implementation](#implementation-14)
+	- [Memento](#memento)
+		- [Indent](#indent-17)
+		- [Motivation](#motivation-15)
+		- [UML](#uml-15)
+		- [Show Me The Code](#show-me-the-code-15)
+		- [Consequences](#consequences-15)
+		- [Implementation](#implementation-15)
+	- [Observer](#observer)
+		- [Indent](#indent-18)
+		- [Motivation](#motivation-16)
+		- [UML](#uml-16)
+		- [Show Me The Code](#show-me-the-code-16)
+		- [Consequences](#consequences-16)
+		- [Implementation](#implementation-16)
+	- [State](#state)
+		- [Indent](#indent-19)
+		- [Motivation](#motivation-17)
+		- [UML](#uml-17)
+		- [Show Me The Code](#show-me-the-code-17)
+		- [Consequences](#consequences-17)
+		- [Implementation](#implementation-17)
+	- [Strategy](#strategy)
+		- [Indent](#indent-20)
+		- [Motivation](#motivation-18)
+		- [UML](#uml-18)
+		- [Show Me The Code](#show-me-the-code-18)
+		- [Consequences](#consequences-18)
+		- [Implementation](#implementation-18)
+	- [Template Method](#template-method)
+		- [Indent](#indent-21)
+		- [Motivation](#motivation-19)
+		- [UML](#uml-19)
+		- [Show Me The Code](#show-me-the-code-19)
+		- [Consequences](#consequences-19)
+		- [Implementation](#implementation-19)
+	- [Visitor](#visitor)
+		- [Indent](#indent-22)
+		- [Motivation](#motivation-20)
+		- [UML](#uml-20)
+		- [Show Me The Code](#show-me-the-code-20)
+		- [Consequences](#consequences-20)
+		- [Implementation](#implementation-20)
 
 # 设计模式
 
@@ -153,7 +250,7 @@ The creational patterns are closely related. For example, there are cases when e
 
 ## Abstract Factory
 
-### Indent
+### Indent  
 
 Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
 
@@ -208,7 +305,7 @@ When product objects in a family are designed to work together, it’s important
 
 Supporting new kinds of products requires extending the factory interface, which involves changing the AbstractFactory class and all of its subclasses. We discuss one solution to this problem in the Implementation section.
 
-### Implementation
+### Implementation  
 
 Here are some useful techniques for implementing the Abstract Factory pattern.
 
@@ -251,15 +348,81 @@ Define an interface for creating an object, but let subclasses decide which clas
 Separate the construction of a complex object from its representation so that the same construction process can create different representations.
 
 
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
+
+
+
+
+
+
 ## Prototype
 
-### Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
+### Indent
+Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
+
+
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
+
+
 
 
 
 ## Singleton
 
-### Ensure a class only has one instance, and provide a global point of access to it.
+### Indent
+Ensure a class only has one instance, and provide a global point of access to it.
+
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 
@@ -269,11 +432,52 @@ Separate the construction of a complex object from its representation so that th
 
 ## Adapter
 
-### Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
+### Indent
+Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
+
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
+
 
 ## Bridge
 
-### Decouple an abstraction from its implementation so that the two can vary independently.
+### Indent
+Decouple an abstraction from its implementation so that the two can vary independently.
+
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 
@@ -281,7 +485,27 @@ Separate the construction of a complex object from its representation so that th
 
 ## Composite
 
-### Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly
+### Indent
+Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly
+
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 
@@ -289,7 +513,27 @@ Separate the construction of a complex object from its representation so that th
 
 ## Decorator
 
-### Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+### Indent
+Attach additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 
@@ -297,22 +541,80 @@ Separate the construction of a complex object from its representation so that th
 
 ## Facade
 
-### Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+### Indent
+Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.
+
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 
 ## Flyweight
 
-### Use sharing to support large numbers of fine-grained objects efficiently.
+### Indent
+Use sharing to support large numbers of fine-grained objects efficiently.
 
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 
 
 ## Proxy
 
-### Provide a surrogate or placeholder for another object to control
+### Indent
+Provide a surrogate or placeholder for another object to control
 
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 
@@ -321,7 +623,8 @@ Separate the construction of a complex object from its representation so that th
 
 ## Chain of Reponsibility
 
-### Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.
+### Indent
+Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.
 
 
 
@@ -329,65 +632,253 @@ Separate the construction of a complex object from its representation so that th
 
 ## Command
 
-### Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
+### Indent
+Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
+
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 
 ## Interpreter
 
-### Given a language, define a represention for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
+### Indent
+Given a language, define a represention for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
 
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 
 
 ## Iterator
 
-### Given a language, define a represention for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
+### Indent
+Given a language, define a represention for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
 
 
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 ## Mediator
 
-### Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently
+### Indent
+Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently
 
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 ## Memento
 
-### Without violating encapsulation, capture and externalize an object’s internal state so that the object can be restored to this state later.
+### Indent
+Without violating encapsulation, capture and externalize an object’s internal state so that the object can be restored to this state later.
 
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 ## Observer
 
-### Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+### Indent
+Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
 
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 ## State
 
-### Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
+### Indent
+Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
 
 
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 ## Strategy
 
-### Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+### Indent
+Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
 
 
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 ## Template Method
 
-### Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
+### Indent
+Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm’s structure.
 
 
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 
 ## Visitor
 
-### Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
+### Indent
+Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.
+
+
+### Motivation
+
+
+
+### UML
+
+
+
+### Show Me The Code
+
+
+
+### Consequences
+
+
+
+### Implementation
 
 
 
