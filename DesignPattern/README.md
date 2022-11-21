@@ -187,19 +187,26 @@ Abstract Factory pattern has the following benefits and liabilities:
 
 #### Isolates concrete classes
 
-The Abstract Factory pattern helps you control the classes of objects that an application creates. Because a factory encapsulates the responsibility and the process of creating product objects, it isolates clients from implementation classes. Clients manipulate instances through their abstract interfaces. Product class names are isolated in the implementation of the concrete factory; they do not appear in client code.
+The Abstract Factory pattern helps you control the classes of objects that an application creates. Because a factory encapsulates the responsibility and the process of creating product objects, it isolates clients from implementation classes. 
+
++ Clients manipulate instances through their abstract interfaces.
++ Product class names are isolated in the implementation of the concrete factory
++ They do not appear in client code
 
 ####  It makes exchanging product families easy
 
-The class of a concrete factory appears only once in an application—that is, where it’s instantiated. This makes it easy to change the concrete factory an application uses. It can use different product configurations simply by changing the concrete factory. Because an abstract factory creates a complete family of products, the whole product family changes at once. In our user interface example, we can switch from Motif widgets to Presentation Manager widgets simply by switching the corresponding factory objects and recreating the interface.
+The class of a concrete factory appears only once in an application—that is, where it’s instantiated. This makes it easy to change the concrete factory an application uses. 
+
++ It can use different product configurations simply by changing the concrete factory. 
++ Because an abstract factory creates a complete family of products, the whole product family changes at once. 
 
 #### It promotes consistency among products.
 
 When product objects in a family are designed to work together, it’s important that an application use objects from only one family at a time. AbstractFactory makes this easy to enforce.
 
-#### But Supporting new kinds of products is difficult.
+#### Supporting new kinds of products is difficult.
 
-Extending abstract factories to produce new kinds of Products isn’t easy. That’s because the AbstractFactory interface fixes the set of products that can be created. Supporting new kinds of products requires extending the factory interface, which involves changing the AbstractFactory class and all of its subclasses. We discuss one solution to this problem in the Implementation section.
+Supporting new kinds of products requires extending the factory interface, which involves changing the AbstractFactory class and all of its subclasses. We discuss one solution to this problem in the Implementation section.
 
 ### Implementation
 
@@ -207,37 +214,41 @@ Here are some useful techniques for implementing the Abstract Factory pattern.
 
 #### Factories as singletons.
 
-An application typically needs only one instance of a ConcreteFactory per product family. So it’s usually best implemented as a Singleton
+An application typically needs only one instance of a ConcreteFactory per product family. So it’s usually best implemented as a `Singleton Method` .
 
 #### Creating the products
 
-AbstractFactory only declares an interface for creating products. The most common way to implement a subclass is to define a factory method (see ***Factory Method***) for each product. Factory will specify its products by overriding the factory method for each. While this implementation is simple, it requires a new concrete factory subclass for each product family.
+AbstractFactory only declares an interface for creating products. 
 
-If many product families are possible, the concrete factory can be implemented using the ***Prototype*** pattern. The concrete factory is initialized with a prototypical instance of each product in the family, and it creates a new product by cloning its prototype.
++ The most common way to implement a subclass is to define a factory method (see `Factory Method` ) for each product. Factory will specify its products by overriding the factory method for each. While this implementation is simple, it requires a new concrete factory subclass for each product family.
++ If many product families are possible, the concrete factory can be implemented using the `Prototype Pattern`. The concrete factory is initialized with a prototypical instance of each product in the family, and it creates a new product by cloning its prototype. 
 
 #### Defining extensible factories
 
-AbstractFactory usually defines a different operation for each kind of product it can produce. Adding a new kind of product requires
-changing the AbstractFactory interface and all the classes that depend on it.
-
-A more flexible but less safe design is to add a parameter to operations that create objects (Polymorphism). For example, AbstractFactory only needs a single “Make” operation with a parameter indicating the kind of object to create. This is the technique used in the Prototype-and the class-based abstract factories discussed earlier.
-
-### Simple Code
+Adding a new kind of product requires changing the AbstractFactory interface and all the classes that depend on it.
 
 
+
+A more flexible but less safe design is to add a parameter to operations that create objects ( `Polymorphism`) - This parameter specifies the kind of object to be created, which could be a class identifier, an integer, a string, or anything else that identifies the kind of product.
+
+
+
+For example, AbstractFactory only needs a single “Make” operation with a parameter indicating the kind of object to create. This is the technique used in the Prototype-and the class-based abstract factories discussed earlier.
 
 
 ## Factory Method
 
-### Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+### Indent
+
+Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
 
 
 
 ## Builder
 
-### Separate the construction of a complex object from its representation so that the same construction process can create different
+### Indent
 
-representations.
+Separate the construction of a complex object from its representation so that the same construction process can create different representations.
 
 
 ## Prototype
