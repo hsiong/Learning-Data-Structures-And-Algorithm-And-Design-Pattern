@@ -174,13 +174,15 @@
 
 + [design patterns best practices in java](design-patterns-and-best-practices-in-java.pdf)
 
-或者可以参考本书的中文版
+或者可以参考中文版
 
 + [设计模式：可复用面向对象软件的基础](设计模式：可复用面向对象软件的基础.pdf)
 
 + [java 设计模式及实践](Java设计模式及实践.pdf)
 
-+ https://refactoringguru.cn/design-patterns/abstract-factory
++ https://refactoringguru.cn/design-patterns
+
++ https://tech.meituan.com/2022/03/10/interesting-talk-about-design-patterns.html
 
 之后参考进行深入学习
 
@@ -366,9 +368,23 @@ Separate the construction of a complex object from its representation so that th
 
 ### Motivation
 
+The builder pattern serves the same purpose as the other creational patterns, but it does so in a different way and for different reasons. When developing complex applications, the code tends to become more complex. Classes tend to **encapsulate** more functionality and, at the same time, class structures become more **complex**. As the functionality grows, more scenarios need to be covered and, for these, different representations of classes are required.
 
+
+
+When we have a complex class that we need to instantiate to different objects with different structures or different internal states, we can use separate classes to encapsulate the instantiation logic. These classes are called `builders`. Each time we need objects from the same class with a different structure, we can create another builder to create such instances.
+
+
+
+<u>The same concept can be used not only for classes for which we need different representations but also for complex objects composed of other objects.</u>
+
+
+
+Creating builder classes to encapsulate the logic to instantiate complex objects is consistent with the `single responsibility principle` and with the `open/closed principle`. When we need objects with different structures, we can add new builder classes, so the code is closed for modification and open for extension, as shown in the diagram:
 
 ### UML
+
+![](./uml/Builder.png)
 
 
 
