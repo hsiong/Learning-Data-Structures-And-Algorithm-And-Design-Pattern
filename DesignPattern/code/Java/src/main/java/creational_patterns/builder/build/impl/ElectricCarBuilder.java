@@ -38,7 +38,7 @@ public class ElectricCarBuilder implements CarBuilder {
     }
 
     // consistent with Open/Close principle & Single Responsibility principle
-    public ElectricCarProduct getElectricCarProduct() {
+    public ElectricCarProduct build() {
         return new ElectricCarProduct(type, wheel, color);
     }
 

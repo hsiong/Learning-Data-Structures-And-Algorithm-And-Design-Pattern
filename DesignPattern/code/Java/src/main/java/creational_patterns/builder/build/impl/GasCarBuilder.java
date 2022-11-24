@@ -38,7 +38,7 @@ public class GasCarBuilder implements CarBuilder {
     }
     
     // consistent with Open/Close principle & Single Responsibility principle
-    public GasCarProduct getGasCarProduct() {
+    public GasCarProduct build() {
         return new GasCarProduct(type, wheel, color);
     }
 }

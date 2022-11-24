@@ -343,7 +343,14 @@ Define an interface for creating an object, but let subclasses decide which clas
 
 ### Motivation
 
+Inheritance is one of the fundamental concepts in object-oriented programming. Along with subtyping polymorphism, it gives us the is/a relationship.
 
+
+
+A Car object can be handled as a Vehicle object. A Truck object can be handled as a Vehicle object too.
+
++ On one hand, this kind of abstraction makes our code thinner, because the same piece of code can handle operations for both Car and Truck objects.
++ On the other hand, it gives us the option to extend our code to new types of Vehicle objects by simply adding new classes such as Bike and Van without modifying it.
 
 ### UML
 
@@ -384,23 +391,54 @@ Creating builder classes to encapsulate the logic to instantiate complex objects
 
 ### UML
 
++ Class Diagram
+
 ![](./uml/Builder.png)
+
++ Interaction Diagram
+
+![](./uml/Builder-interaction.png)
 
 
 
 ### Show Me The Code
 
-
+[builder](./code/Java/src/main/java/creational_patterns/builder)
 
 ### Consequences
 
+#### It lets you vary a product’s internal representation
 
++ The Builder object provides the director with an abstract interface for constructing the product. The interface lets the builder hide the representation and internal structure of the product.
++ It also hides how the product gets assembled. Because the product is constructed through an abstract interface, all you have to do to change the product’s internal representation is define a new kind of builder.
+
+#### It isolates code for construction and representation
+
++ The Builder pattern improves modularity by encapsulating the way a complex object is constructed and represented. Clients needn’t know anything about the classes that define the product’s internal structure.
+
++ Each Builder contains all the code to create and assemble a particular kind of product. The code is written once; then different Directors can reuse it to build Product variants from the same set of parts.
+
+#### It gives you finer control over the construction process
+
++ Unlike creational patterns that construct products in one shot, the Builder pattern constructs the product step by step under the director’s control. Only when the product is finished does the director retrieve it from the builder.
++ Hence the Builder interface reflects the process of constructing the product more than other creational patterns.This gives you finer control over the construction process and consequently the internal structure of the resulting product.
 
 ### Implementation
 
+Typically there’s an abstract `Builder` class that defines an operation for each component that a director may ask it to create. The operations do nothing by default. A `ConcreteBuilder` class overrides operations for components it’s interested in creating.
 
+Here are other implementation issues to consider:
 
++ Assembly and construction `interface`.
 
+  + The Builder class interface must be general enough to allow the construction of products for all kinds of concrete builders.
+
+  + A model where the results of construction requests are simply appended to the product is usually sufficient. 
+  + But sometimes you might need access to parts of the product constructed earlier. In some cases, the builder would return child nodes to the director, which then would pass them back to the builder to build the parent nodes.
+
++ Why no abstract class for products? 
+
+  In the common case, the products produced by the concrete builders differ so greatly in their representation that there is little to gain from giving different products a common parent class. 
 
 
 ## Prototype

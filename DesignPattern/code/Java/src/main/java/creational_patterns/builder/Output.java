@@ -3,6 +3,7 @@ package creational_patterns.builder;
 import creational_patterns.builder.build.CarBuilder;
 import creational_patterns.builder.build.impl.ElectricCarBuilder;
 import creational_patterns.builder.build.impl.GasCarBuilder;
+import creational_patterns.builder.director.BuilderDirector;
 import creational_patterns.builder.product.ElectricCarProduct;
 import creational_patterns.builder.product.GasCarProduct;
 
@@ -16,14 +17,20 @@ import creational_patterns.builder.product.GasCarProduct;
 public class Output {
 
     public static void main(String[] args) {
+        
+        // new Builder
         CarBuilder gasCarBuilder = new GasCarBuilder();
-        gasCarBuilder.addEngine(1F).paint("gas").addWheel(1);
-        GasCarProduct gasCarProduct = ((GasCarBuilder) gasCarBuilder).getGasCarProduct();
-        System.out.println(gasCarProduct);
-
         CarBuilder electricCarBuilder = new ElectricCarBuilder();
-        electricCarBuilder.addEngine(2F).paint("electric").addWheel(2);
-        ElectricCarProduct electricCarProduct = ((ElectricCarBuilder) electricCarBuilder).getElectricCarProduct();
+
+        // new Director(builder)
+        BuilderDirector builderDirector = new BuilderDirector();
+        
+        // Construct
+        GasCarProduct gasCarProduct = builderDirector.buildGasCar(gasCarBuilder);
+        ElectricCarProduct electricCarProduct = builderDirector.buildElectricCar(electricCarBuilder);
+        
+        // Out
+        System.out.println(gasCarProduct);
         System.out.println(electricCarProduct);
     }
     
