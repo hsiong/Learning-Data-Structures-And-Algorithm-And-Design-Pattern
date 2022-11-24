@@ -274,10 +274,10 @@ We can solve this problem by defining an `AbstractFactory` class that declares a
 
 ### Uml
 
-![](./uml/Abstract%20Factory.png)
+![](./uml/creational_pattern/Abstract%20Factory.png)
 
 ### Show Me The Code
-[abstract_function](./code/Java/src/main/java/creational_patterns/abstract_function)
+[abstract_function](./code/Java/src/main/java/creational_pattern/abstract_function)
 
 
 ### Consequences
@@ -334,8 +334,46 @@ A more flexible but less safe design is to add a parameter to operations that cr
 
 For example, AbstractFactory only needs a single “Make” operation with a parameter indicating the kind of object to create. This is the technique used in the Prototype-and the class-based abstract factories discussed earlier.
 
-
 ## Factory Method
+
+
+
+### Simple factory & Static factory pattern
+
+The factory method pattern is an improvement upon the `Static Factory Pattern`. Before start, let's talk about these patterns.
+
+#### Simple factory pattern
+
+A simple factory pattern as showed below
+
+```java
+Vehicle vehicle = new Car();
+Vehicle vehicle = new Truck();
+```
+
+Static factory pattern
+
+A static factory pattern as showed below
+
+```java
+public class VehicleFactory
+{
+  public enum VehicleType
+  {
+    Bike,Car,Truck
+  }
+  public static Vehicle create(VehicleType type)
+  {
+    if (type.equals(VehicleType.Bike))
+    return new Bike();
+    if (type.equals(VehicleType.Car))
+    return new Car();
+    if (type.equals(VehicleType.Truck))
+    return new Truck();
+    else return null;
+  }
+}
+```
 
 ### Indent
 
@@ -347,18 +385,31 @@ Inheritance is one of the fundamental concepts in object-oriented programming. A
 
 
 
-A Car object can be handled as a Vehicle object. A Truck object can be handled as a Vehicle object too.
+Consider a framework for applications that can present multiple documents to the user. Two key abstractions in this framework are the classes **Car** and **Creator**. Both classes are abstract, and clients have to subclass them to realize their application-specific implementations. Because the particular Car subclass to instantiate is application-specific, the Application class can’t predict the subclass of Car to instantiate—the Creator class only knows when a new Car should be created, not what kind of Car to create. This creates a dilemma: The framework must instantiate classes, but it only knows about abstract classes, which it cannot instantiate.
 
-+ On one hand, this kind of abstraction makes our code thinner, because the same piece of code can handle operations for both Car and Truck objects.
-+ On the other hand, it gives us the option to extend our code to new types of Vehicle objects by simply adding new classes such as Bike and Van without modifying it.
+
+
+The `Factory Method pattern` offers a solution. It encapsulates the knowledge of which Car subclass to create and moves this knowledge out of the framework.
+
+
+
+To create a drawing application, for example, we define the classes **CarCreator** and **Car**. The CarCreator class is responsible for managing Car and will create them .
+
+
+
+CarCreator subclasses redefine an abstract createCar() operation on CarCreator to return the appropriate Car subclass. Once an CarCreator subclass is instantiated, it can then instantiate application-specific Car without knowing their class. We call createCar() a factory method because it’s responsible for “manufacturing” an object.
 
 ### UML
 
 
 
+![](./uml/creational_pattern/Factory%20Method.png)
+
+
+
 ### Show Me The Code
 
-
+[Factory Method](./code/Java/src/main/java/creational_pattern/factory_method)
 
 ### Consequences
 
@@ -393,17 +444,17 @@ Creating builder classes to encapsulate the logic to instantiate complex objects
 
 + Class Diagram
 
-![](./uml/Builder.png)
+![](./uml/creational_pattern/Builder.png)
 
 + Interaction Diagram
 
-![](./uml/Builder-interaction.png)
+![](./uml/creational_pattern/Builder-interaction.png)
 
 
 
 ### Show Me The Code
 
-[builder](./code/Java/src/main/java/creational_patterns/builder)
+[builder](./code/Java/src/main/java/creational_pattern/builder)
 
 ### Consequences
 
