@@ -189,7 +189,7 @@
 + [Design Patterns Implement By Java](  https://java-design-patterns.com/patterns/)
 
 > 注意: 千万注意: 菜鸟教程的设计模式教程很多是错误的 ! 千万不要图方便去学这个教程 (例如抽象工厂就是完全错误的)  
-> 当然个人其实完全不建议用菜鸟教程
+> 当然个人不建议用菜鸟教程任何一个课程
 # Code Practise
 
 + [Java - ongoing](Java)
@@ -411,11 +411,28 @@ CarCreator subclasses redefine an abstract createCar() operation on CarCreator t
 
 [Factory Method](./code/Java/src/main/java/creational_pattern/factory_method)
 
+
+
 ### Consequences
 
+Here are two additional consequences of the Factory Method pattern:
 
++ Provides hooks for subclasses. Creating objects inside a class with a factory method is always more flexible than creating an object directly. Factory Method gives subclasses a hook for providing an extended version of an object. In this case the factory method is not abstract but provides a reasonable default implementation.
++ Connects parallel class hierarchies. 
 
 ### Implementation
+
+Consider the following issues when applying the Factory Method pattern:
+
+1. Two major varieties: 
+   + the case when the Creator class is an abstract class and does not provide an implementation for the factory method it declares. It requires subclasses to define an implementation, because there’s no reasonable default. It gets around the dilemma of having to instantiate unforeseeable classes.
+   + the case when the Creator is a concrete class and provides a default implementation for the factory method. The concrete Creator uses the factory method primarily for flexibility. 
+2. `Parameterized factory methods`. Another variation on the pattern lets the factory method create multiple kinds of products. The factory method takes a parameter that identifies the kind of object to create. All objects the factory method creates will share the Product interface. Overriding a parameterized factory method lets you easily and selectively extend or change the products that a Creator produces. You can introduce new identifiers for new kinds of products, or you can associate existing identifiers with different products.
+3. Language-specific variants and issues. Different languages lend themselves to other interesting variations and caveats. You can avoid this by being careful to access products solely through accessor operations that create the product on demand. Instead of creating the concrete product in the constructor, the constructor merely initializes it to 0. The accessor returns the product. But first it checks to make sure the product exists, and if it doesn’t, the accessor creates it. This technique is sometimes called `lazy initialization`.
+4. Using `templates` to avoid subclassing. As we’ve mentioned, another potential problem with factory methods is that they might force you to subclass just to create the appropriate Product objects.
+5. `Naming conventions`. It’s good practice to use naming conventions that make it clear you’re using factory methods.
+
+
 
 ## Builder
 
@@ -501,7 +518,31 @@ Specify the kinds of objects to create using a prototypical instance, and create
 
 ### Motivation
 
+You could build an editor for music scores by customizing a general framework for graphical editors and adding new objects that represent notes, rests, and staves. 
 
+	+ The editor framework may have a palette of tools for adding these music objects to the score. The palette would also include tools for selecting, moving, and otherwise manipulating music objects. U
+	+ sers will click on the quarter-note tool and use it to add quarter notes to the score. 
+	+ Or they can use the move tool to move a note up or down on the staff, thereby changing its pitch.
+
+
+
+Let’s assume the framework provides an abstract Graphic class for graphical components, like notes and staves. Moreover, it’ll provide an abstract Tool class for defining tools like those in the palette. The framework also predefines a GraphicTool subclass for tools that create instances of graphical objects and add them to the document.
+
+
+
+But GraphicTool presents a problem to the framework designer - The classes for notes and staves are specific to our application, but the GraphicTool class belongs to the framework. 
+
++ GraphicTool doesn’t know how to create instances of our music classes to add to the score. 
++ We could subclass GraphicTool for each kind of music object, but that would produce lots of subclasses that differ only in the kind of music object they instantiate. 
++ We know object composition is a flexible alternative to subclassing. The question is, how can the framework use it to parameterize instances of GraphicTool by the class of Graphic they’re supposed to create?
+
+
+
+The solution lies in making GraphicTool create a new Graphic by copying or “cloning” an instance of a Graphic subclass. We call this instance a `prototype`. GraphicTool is parameterized by the prototype it should clone and add to the document. If all Graphic subclasses support a Clone operation, then the GraphicTool can `clone` any kind of Graphic.
+
+
+
+So in our music editor, each tool for creating a music object is an instance of GraphicTool that’s initialized with a different prototype. Each GraphicTool instance will produce a music object by cloning its prototype and adding the clone to the score
 
 ### UML
 
