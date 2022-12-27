@@ -520,9 +520,9 @@ Specify the kinds of objects to create using a prototypical instance, and create
 
 You could build an editor for music scores by customizing a general framework for graphical editors and adding new objects that represent notes, rests, and staves. 
 
-	+ The editor framework may have a palette of tools for adding these music objects to the score. The palette would also include tools for selecting, moving, and otherwise manipulating music objects. U
-	+ sers will click on the quarter-note tool and use it to add quarter notes to the score. 
-	+ Or they can use the move tool to move a note up or down on the staff, thereby changing its pitch.
++ The editor framework may have a palette of tools for adding these music objects to the score. The palette would also include tools for selecting, moving, and otherwise manipulating music objects. U
++ sers will click on the quarter-note tool and use it to add quarter notes to the score. 
++ Or they can use the move tool to move a note up or down on the staff, thereby changing its pitch.
 
 
 
