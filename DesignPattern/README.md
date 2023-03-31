@@ -170,15 +170,15 @@
 
 这是一个由浅入深的过程, 教材参考
 
-+ [Design Patterns_Elements of Reusable Object-Oriented Software ](Design%20Patterns_Elements%20of%20Reusable%20Object-Oriented%20Software%20.pdf)
++ [Design Patterns_Elements of Reusable Object-Oriented Software ](book/Design%20Patterns_%20Elements%20of%20Reusable%20Object-Oriented%20Software.pdf)
 
-+ [design patterns best practices in java](design-patterns-and-best-practices-in-java.pdf)
++ [design patterns best practices in java](book/design-patterns-and-best-practices-in-java.pdf)
 
 或者可以参考中文版
 
-+ [设计模式：可复用面向对象软件的基础](设计模式：可复用面向对象软件的基础.pdf)
++ [设计模式：可复用面向对象软件的基础](book/设计模式：可复用面向对象软件的基础.pdf)
 
-+ [java 设计模式及实践](Java设计模式及实践.pdf)
++ [java 设计模式及实践](book/Java设计模式及实践.pdf)
 
 + https://refactoringguru.cn/design-patterns
 
@@ -186,10 +186,10 @@
 
 之后参考进行深入学习
 
-+ [Design Patterns Implement By Java](  https://java-design-patterns.com/patterns/)
++ [Design Patterns Implement By Java](https://java-design-patterns.com/patterns/)
 
-> 注意: 千万注意: 菜鸟教程的设计模式教程很多是错误的 ! 千万不要图方便去学这个教程 (例如抽象工厂就是完全错误的)  
-> 当然个人不建议用菜鸟教程任何一个课程
+> 注意: 千万注意: 菜鸟教程的设计模式教程很多是错误的(如抽象工厂模式)   ! 千万不要图方便去学这个教程 
+
 # Code Practise
 
 + [Java - ongoing](Java)
